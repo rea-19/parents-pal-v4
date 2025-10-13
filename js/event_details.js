@@ -1,3 +1,4 @@
+
 function getQueryParam(name) {
     return new URLSearchParams(window.location.search).get(name);
 }
@@ -47,15 +48,27 @@ $(document).ready(function() {
                 }
 
                 $("#event-details").html(`
-                    <h1>${record.subject}</h1>
-                    <p class="filter"><strong>Date:</strong> ${record.formatteddatetime}</p>
-                    <p class="filter"><strong>Location:</strong> ${record.location}</p>
-                    <p class="filter"><strong>Age:</strong> ${record.age}</p>
-                    <p class="filter"><strong>Event Type:</strong> ${record.primaryeventtype || "N/A"}</p>
-                    <p class="filter"><strong>Cost:</strong> ${record.cost || "N/A"}</p>
-                    <p>${record.description}</p>
-                    <div>${bookingButton}</div>
+                    <section class="event-details">
+                        <div class = "event=box">
+                            <h2 class = "event-heading">${record.subject}</h2>
+
+                            <p class = "event-description">${record.description} || "No description." }</p>
+
+                            <div class= "event-info">
+                                <p class="filter"><strong>Date:</strong> ${record.formatteddatetime}</p>
+                                <p class="filter"><strong>Location:</strong> ${record.location}</p>
+                                <p class="filter"><strong>Age:</strong> ${record.age}</p>
+                                <p class="filter"><strong>Event Type:</strong> ${record.primaryeventtype || "N/A"}</p>
+                                <p class="filter"><strong>Cost:</strong> ${record.cost || "N/A"}</p>
+                            </div>
+
+
+                            ${bookingButton}
+                        </div>
+                    </section>
                 `);
+
+                
             } else {
                 $("#event-details").html("<p>Event not found.</p>");
             }

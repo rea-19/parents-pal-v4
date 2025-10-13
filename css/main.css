@@ -282,103 +282,33 @@ body {
     transition: color 0.2s;
 }
 
-#reviews{
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 12px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
-    overflow-y: auto;
-}
 
-.reviews-heading{
-    letter-spacing: 1px;
-    margin: 10px 0px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.reviews-heading h1{
-    font-size: 2.2rem;
-    font-weight: 500;
-    background-color: #113213;
-    color: #ffffff;
-    padding: 10px 20px;
-}
-
-.reviews-box-container{
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-.reviews-box-container .reviews-box {
-  margin-bottom: 15px;
-}
-.reviews-box{
-    width:100%;
-}
-.profile{
-    display: flex;
-    align-items: center;
-}
-.name-user{
-    display: flex;
-    flex-direction: column;
-}
-.name-user strong{
-    color: #3d3d3d;
-    font-size: 1.1rem;
-    letter-spacing: 0.5px;
-}
-.name-user span{
-    color: #979797;
-    font-size: 0.8rem;
-}
-.reviews{
-    color: #f9d71c;
-}
-.box-top{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-}
-.client-comment p{
-    font-size: 0.9rem;
-    color: #4b4b4b;
-}
-.review-box:hover{
-    transform: translateY(-10px);
-    transition: all ease 0.3s;
-}
- 
-@media(max-width:1060px){
-    .review-box{
-        width:45%;
-        padding: 10px;
-    }
-}
-@media(max-width:790px){
-    .review-box{
-        width:100%;
-    }
-    .review-heading h1{
-        font-size: 1.4rem;
-    }
-}
-@media(max-width:340px){
-    .box-top{
-        flex-wrap: wrap;
-        margin-bottom: 10px;
-    }
-    .reviews{
-        margin-top: 10px;
-    }
-}
 ::selection{
     color: #ffffff;
     background-color: #252525;
 }
  
 
+.reviews{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 50px auto;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    bottom:0;
 
+}
+
+.reviews .elfsight-app-b1ed0314-7e70-428f-b9d2-e9dcf252213a {
+    width: 100%;
+    max-width: none;
+
+}
+
+.reviews iframe,
+.reviews > div {
+    width: 100%;
+}
