@@ -32,27 +32,30 @@ $(document).ready(function() {
 
             if (record) {
                 // Default: no booking required
-                let bookingButton = `<button>No Booking Required</button>`;
+                let bookingButton = `<button class = "booking-button"> No Booking Required </button>`;
 
                 // If infants-and-toddlers dataset has a booking field
                 if (record.booking) {
                     // Extract <a href="..."> link
                     const match = record.booking.match(/href=["']([^"']+)["']/);
                     if (match && match[1]) {
-                        bookingButton = `<a href="${match[1]}" target="_blank">
-                                            <button>Book Now</button>
+                        bookingButton = `
+                        <a href="${match[1]}" target="_blank">
+                                            <button class = "booking-button"> Book Now </button>
                                         </a>`;
                     } else {
-                        bookingButton = `<button>Booking Info Unavailable</button>`;
+                        bookingButton = `<button class= "booking-button" >Booking Info Unavailable</button>`;
                     }
                 }
 
                 $("#event-details").html(`
                     <section class="event-details">
-                        <div class = "event=box">
-                            <h2 class = "event-heading">${record.subject}</h2>
-
-                            <p class = "event-description">${record.description} || "No description." }</p>
+                        <div class = "event-box">
+                        <div class="event-image" style="background-image: url('${record.eventimage || "https://source.unsplash.com/featured/?event,library"}');">
+                                <h2 class = "event-heading">${record.subject}</h2>
+                        </div>
+                        
+                            <p class="event-description">${record.description} || "No description for this event."}</p>
 
                             <div class= "event-info">
                                 <p class="filter"><strong>Date:</strong> ${record.formatteddatetime}</p>
@@ -68,7 +71,7 @@ $(document).ready(function() {
                     </section>
                 `);
 
-                
+
             } else {
                 $("#event-details").html("<p>Event not found.</p>");
             }
