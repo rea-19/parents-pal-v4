@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Browse Events</title>
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/css/browse_events.css">
-    <link rel="stylesheet" href="/css/quiz_popup.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css"/>
 </head>
@@ -97,57 +95,6 @@
     <!-- The footer is fetched -->
     <div id="footer"></div>
 
-    <!-- Quiz pop up after 3s -->
-    <div class="quiz-popup" style="display:none;">
-        <div class="quiz-popup-content">
-            <h2>Not sure what event’s right for you?</h2>
-            <p>Take the free quiz now</p>
-            <button id="take-quiz-btn">Find My Event Match</button>
-            <button id="close-quiz-popup" style="margin-left:10px;">Close</button>
-        </div>
-    </div>
-
-    <!-- Quiz Form -->
-    <div class="quiz-form-popup" style="display:none;">
-        <div class="quiz-form-popup-content">
-            <h2>Personalise Your Event Match</h2>
-            <form id="quiz-preferences-form">
-                <label for="child-age">1. Please enter the age of your child/children:</label>
-                <input type="text" id="child-age" name="child-age" placeholder="e.g. 4, 7" required>
-
-                <label for="price-range">2. Please select a price range for your event (cost per child):</label>
-                <input type="text" id="quiz-cost-slider" name="quiz-cost-slider" value="" />
-
-
-                <label for="activity-type">3. Please select your child/children's preferred activity type:</label>
-                <div id="activity-type" name="activity-type">
-                    <label><input type="checkbox" name="activity" value="Art"> Art</label>
-                    <label><input type="checkbox" name="activity" value="Creative"> Creative</label>
-                    <label><input type="checkbox" name="activity" value="Culture"> Culture</label>
-                    <label><input type="checkbox" name="activity" value="Exhibitions"> Exhibitions</label>
-                    <label><input type="checkbox" name="activity" value="Family events"> Family events</label>
-                    <label><input type="checkbox" name="activity" value="Featured"> Featured</label>
-                    <label><input type="checkbox" name="activity" value="Festivals"> Festivals</label>
-                    <label><input type="checkbox" name="activity" value="Fitness & well-being"> Fitness & well-being</label>
-                    <label><input type="checkbox" name="activity" value="Food"> Food</label>
-                    <label><input type="checkbox" name="activity" value="Green"> Green</label>
-                    <label><input type="checkbox" name="activity" value="Markets"> Markets</label>
-                    <label><input type="checkbox" name="activity" value="Music"> Music</label>
-                    <label><input type="checkbox" name="activity" value="School holidays"> School holidays</label>
-                    <label><input type="checkbox" name="activity" value="Tours"> Tours</label>
-                    <label><input type="checkbox" name="activity" value="Workshops"> Workshops</label>
-                </div>
-
-                <label for="quiz-suburb">4. Enter your suburb:</label>
-                <input type="text" id="quiz-suburb" name="suburb" placeholder="e.g. St Lucia" required>
-
-
-                <button type="submit" id="save-preferences-btn">Save my preferences</button>
-                <button type="button" id="close-quiz-form-popup" style="margin-left:10px;">Close</button>
-            </form>
-        </div>
-    </div>
-
 
     <!-- Javascript -->
     <script src="/js/header_footer.js"></script>
@@ -157,7 +104,6 @@
 	<script src="/js/get_events.js"></script>
     <script src="/js/cost_slider.js"></script>
     <script src="/js/filter_logic.js"></script>
-    <script src="/js/quiz_pop.js"></script>
     <!-- Flatpickr Library -->
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     
