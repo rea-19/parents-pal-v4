@@ -66,10 +66,30 @@ $(document).ready(function() {
                             </div>
 
 
-                            ${bookingButton}
-                        </div>
+                            <div class="event-actions">
+                <button id="save-booked">Save for Attendance</button>
+                <button id="save-favourite">Favourite</button>
+            </div>
                     </section>
                 `);
+
+            // ------------------ BUTTON FUNCTIONALITY ------------------
+
+// Save event to localStorage (Booked)
+$("#save-booked").click(function() {
+    const booked = JSON.parse(localStorage.getItem("bookedEvents") || "[]");
+    booked.push(record);
+    localStorage.setItem("bookedEvents", JSON.stringify(booked));
+    alert("Event saved to Booked Events!");
+});
+
+// Save event to localStorage (Favourites)
+$("#save-favourite").click(function() {
+    const fav = JSON.parse(localStorage.getItem("favouriteEvents") || "[]");
+    fav.push(record);
+    localStorage.setItem("favouriteEvents", JSON.stringify(fav));
+    alert("Event saved to Favourites!");
+});
 
 
             } else {
